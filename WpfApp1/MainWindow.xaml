@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowState="Maximized"
+        Background="Black"
+        
+        WindowStyle="None"
+        Topmost="True"
+        ResizeMode="NoResize"
+        Title="UMFG - Home" Height="450" Width="800">
     <Grid>
-
+        
+        <!--<Button Height="50" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click">Teste</Button>-->
     </Grid>
 </Window>
