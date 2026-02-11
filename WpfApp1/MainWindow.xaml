@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Background="Black"
+        Background="White"
         
         WindowStyle="None"
         Topmost="True"
