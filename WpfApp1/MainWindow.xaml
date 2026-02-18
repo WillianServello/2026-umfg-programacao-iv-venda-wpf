@@ -8,12 +8,19 @@
         WindowState="Maximized"
         Background="White"
         
-        WindowStyle="None"
-        Topmost="True"
-        ResizeMode="NoResize"
-        Title="UMFG - Home" Height="450" Width="800">
-    <Grid>
         
-        <!--<Button Height="50" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click">Teste</Button>-->
+        Title="UMFG - Home" Height="720" Width="1080">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="25 0 0 0">
+            <TextBlock Text="{Binding Titulo}" FontSize="28" FontWeight="SemiBold" 
+                       FontFamily="Trebuchet MS" VerticalAlignment="Center"/>
+        </StackPanel>
+        
     </Grid>
 </Window>

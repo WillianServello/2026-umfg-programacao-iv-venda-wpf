@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using projetoVendas.ViewModels;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,15 +20,11 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
         }
         //ações, então é void
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           
-                MessageBox.Show("Olá Mundo!");
-            
-            
-        }
+      
+        
 
       
     }
