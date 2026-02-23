@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projetoVendas.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace projetoVendas.Models.Abstract
 {
-    internal abstract class AbstractViewModel : AbstractNotifyPropertyChange
+    internal abstract class AbstractViewModel : AbstractNotifyPropertyChange, ISubject
     {
+
+        private readonly ICollection<IObserver> _observers = [];
         private string _titulo = string.Empty;
 
         public string Titulo
@@ -19,6 +22,24 @@ namespace projetoVendas.Models.Abstract
         protected AbstractViewModel(string titulo)
         {
             Titulo = titulo;
+        }
+
+        public void Add(IObserver observer)
+        {
+               _observers.Add(observer);
+        }
+
+        public void Remove(IObserver observer)
+        {
+            _observers.Remove(observer);
+        }
+
+        public void Notify()
+        {
+            foreach (var item in _observers)
+            {
+                item.Update(this);
+            }
         }
     }
 }
