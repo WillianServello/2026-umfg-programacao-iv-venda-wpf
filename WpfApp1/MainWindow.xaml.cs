@@ -1,4 +1,5 @@
-﻿using projetoVendas.ViewModels;
+﻿using projetoVendas.UserControls;
+using projetoVendas.ViewModels;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,10 +18,17 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+
+            var viewModel = new MainWindowViewModel();
+            viewModel.UserControl = new ucListarProdutos();
+
+
+
+            DataContext = viewModel ;
         }
         //ações, então é void
       

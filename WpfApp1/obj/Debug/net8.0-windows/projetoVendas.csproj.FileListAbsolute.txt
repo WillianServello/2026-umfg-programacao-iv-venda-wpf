@@ -28,6 +28,10 @@ C:\Users\WillianRafael\source\repos\WillianServello\2026-umfg-programacao-iv-ven
 C:\Users\WillianRafael\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\obj\Debug\net8.0-windows\projetoVendas.pdb
 C:\Users\WillianRafael\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\obj\Debug\net8.0-windows\projetoVendas.genruntimeconfig.cache
 C:\Users\WillianRafael\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\obj\Debug\net8.0-windows\ref\projetoVendas.dll
+C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\bin\Debug\net8.0-windows\Imagens\batata.png
+C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\bin\Debug\net8.0-windows\Imagens\combo.png
+C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\bin\Debug\net8.0-windows\Imagens\lanche.png
+C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\bin\Debug\net8.0-windows\Imagens\refrigerante.png
 C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\bin\Debug\net8.0-windows\projetoVendas.exe
 C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\bin\Debug\net8.0-windows\projetoVendas.deps.json
 C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\bin\Debug\net8.0-windows\projetoVendas.runtimeconfig.json
