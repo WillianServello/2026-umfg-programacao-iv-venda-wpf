@@ -23,12 +23,10 @@ namespace WpfApp1
         {
             InitializeComponent();
 
-            var viewModel = new MainWindowViewModel();
-            viewModel.UserControl = new ucListarProdutos();
+            
 
 
-
-            DataContext = viewModel ;
+            DataContext = new MainWindowViewModel();
         }
         //ações, então é void
       

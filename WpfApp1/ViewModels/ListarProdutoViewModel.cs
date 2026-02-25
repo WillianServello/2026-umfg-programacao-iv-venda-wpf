@@ -1,4 +1,5 @@
-﻿using projetoVendas.Models;
+﻿using projetoVendas.Interfaces;
+using projetoVendas.Models;
 using projetoVendas.Models.Abstract;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
 namespace projetoVendas.ViewModels
@@ -26,8 +29,12 @@ namespace projetoVendas.ViewModels
             set => SetField(ref _produtos, value);
         }
 
-        public ListarProdutoViewModel(string titulo) : base("Produtos")
+        public ListarProdutoViewModel(IObserver observer, UserControl userControl) : base("Produtos")
         {
+            UserControl = userControl;
+            MainWindow = observer;
+
+            Add(observer);
             CarregarProdutos();
         }
 
@@ -37,7 +44,8 @@ namespace projetoVendas.ViewModels
 
             Produtos.Add(new ModelProduto()
             {
-                Imagem = new BitmapImage(new Uri(@"..\net-8.0-windows\Images\batata.png", UriKind.Relative)),
+               
+                Imagem = new BitmapImage(new Uri(@"..\net8.0-windows\Imagens\batata.png", UriKind.Relative)),
                 Descricao = "Batata Frita 300gr",
                 Referencia = "0001",
                 Valor = 10.90m,
@@ -45,7 +53,7 @@ namespace projetoVendas.ViewModels
 
             Produtos.Add(new ModelProduto()
             {
-                Imagem = new BitmapImage(new Uri(@"..\net-8.0-windows\Images\batata.png", UriKind.Relative)),
+                Imagem = new BitmapImage(new Uri(@"..\net8.0-windows\Imagens\batata.png", UriKind.Relative)),
                 Descricao = "Batata Frita 300gr",
                 Referencia = "0001",
                 Valor = 10.90m,
@@ -53,7 +61,7 @@ namespace projetoVendas.ViewModels
 
             Produtos.Add(new ModelProduto()
             {
-                Imagem = new BitmapImage(new Uri(@"..\net-8.0-windows\Images\combo.png", UriKind.Relative)),
+                Imagem = new BitmapImage(new Uri(@"..\net8.0-windows\Imagens\combo.png", UriKind.Relative)),
                 Descricao = "Combo BIG MAC + BATATA 300GR + REFIL 500ML",
                 Referencia = "0002",
                 Valor = 49.90m,
@@ -61,7 +69,7 @@ namespace projetoVendas.ViewModels
 
             Produtos.Add(new ModelProduto()
             {
-                Imagem = new BitmapImage(new Uri(@"..\net-8.0-windows\Images\lanche.png", UriKind.Relative)),
+                Imagem = new BitmapImage(new Uri(@"..\net8.0-windows\Imagens\lanche.png", UriKind.Relative)),
                 Descricao = "Big Mac 350g",
                 Referencia = "0003",
                 Valor = 25.90m,
@@ -69,7 +77,7 @@ namespace projetoVendas.ViewModels
 
             Produtos.Add(new ModelProduto()
             {
-                Imagem = new BitmapImage(new Uri(@"..\net-8.0-windows\Images\refrigerante.png", UriKind.Relative)),
+                Imagem = new BitmapImage(new Uri(@"..\net8.0-windows\Imagens\refrigerante.png", UriKind.Relative)),
                 Descricao = "Refrigerante Refil 500ml",
                 Referencia = "0004",
                 Valor = 10.90m,

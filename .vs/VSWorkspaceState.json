@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WpfApp1"
+    "\\WpfApp1",
+    "\\WpfApp1\\UserControls"
   ],
-  "SelectedNode": "\\WpfApp1\\App.xaml",
+  "SelectedNode": "\\WpfApp1\\UserControls\\ucListarProdutos.xaml",
   "PreviewInSolutionExplorer": false
 }

@@ -1,10 +1,12 @@
-﻿using projetoVendas.Interfaces;
+﻿using projetoVendas.Commands;
+using projetoVendas.Interfaces;
 using projetoVendas.Models.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Controls;
 
 namespace projetoVendas.ViewModels
@@ -20,6 +22,8 @@ namespace projetoVendas.ViewModels
             set => SetField(ref _userControl, value);
         }
 
+        public ListarProdutosCommand ListarProdutos { get; private set; } = new();
+
         public MainWindowViewModel() : base("UMFG - Tela Principal")
         {
             
@@ -27,7 +31,8 @@ namespace projetoVendas.ViewModels
 
         public void Update(ISubject subject)
         {
-            throw new NotImplementedException();
+            if (subject is ListarProdutoViewModel)
+                UserControl = (subject as ListarProdutoViewModel).UserControl;
         }
     }
-}
+} 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using projetoVendas.Interfaces;
+using projetoVendas.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,15 @@ namespace projetoVendas.UserControls
     /// </summary>
     public partial class ucListarProdutos : UserControl
     {
-        public ucListarProdutos()
+        private ucListarProdutos(IObserver observer)
         {
             InitializeComponent();
+            DataContext = new ListarProdutoViewModel(observer, this);
+        }
+
+        internal static void Show(IObserver observer)
+        {
+            (new ucListarProdutos(observer).DataContext as ListarProdutoViewModel).Notify();
         }
     }
 }

@@ -20,8 +20,28 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="25 0 0 0">
             <TextBlock Text="{Binding Titulo}" FontSize="28" FontWeight="SemiBold" 
                        FontFamily="Trebuchet MS" VerticalAlignment="Center"/>
+            
+            
         </StackPanel>
 
-        <Frame Grid.Row="1" Content="{Binding UserControl}" NavigationUIVisibility="Hidden"/>
+        <Button Grid.Row="1"
+                Style="{StaticResource MaterialDesignRaisedLightButton}"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Height="200" 
+                Width="200"
+                FontSize="30"
+                CommandParameter="{Binding}"
+                Command="{Binding ListarProdutos, UpdateSourceTrigger=PropertyChanged}"
+                Content="_Iniciar"
+                Foreground="White"
+                Margin="10 5 10 10" Cursor="Hand"/>
+
+        <Frame Grid.Row="1" 
+               Content="{Binding UserControl}" 
+               NavigationUIVisibility="Hidden" Cursor=""
+               
+
+            />
     </Grid>
 </Window>

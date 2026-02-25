@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace projetoVendas.Models.Abstract
 {
@@ -13,11 +14,16 @@ namespace projetoVendas.Models.Abstract
         private readonly ICollection<IObserver> _observers = [];
         private string _titulo = string.Empty;
 
+
         public string Titulo
         {
             get => _titulo;
             set => SetField(ref _titulo, value);
         }
+
+        public UserControl UserControl { get; protected set; }
+
+        public IObserver MainWindow { get; protected set; }
 
         protected AbstractViewModel(string titulo)
         {
