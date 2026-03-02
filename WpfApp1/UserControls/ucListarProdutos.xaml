@@ -79,10 +79,20 @@
 
                 <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
                         CommandParameter="{Binding}"
-                        Command="{Binding Adicionar}"
+                        Command="{Binding Adicionar, UpdateSourceTrigger=PropertyChanged}"
                         Content="_Adicionar"
                         Margin="10 5 10 10"
                         Foreground="Black"/>
+                
+                <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        CommandParameter="{Binding}"
+                        Command="{Binding Remover, UpdateSourceTrigger=PropertyChanged}"
+                        Content="_Remover"
+                        Margin="10 5 10 10"
+                        Foreground="black"
+                        Background="red"
+                        />
+                        
             </StackPanel>
 
             <StackPanel Orientation="Horizontal"
@@ -98,8 +108,9 @@
                         Command="{Binding Receber, UpdateSourceTrigger=PropertyChanged}"
                         Content="_Receber"
                         Foreground="Black"
+                        Background="#008000"
                         Margin="10 5 10 10"/>
-
+                
 
             </StackPanel>
         </Grid>

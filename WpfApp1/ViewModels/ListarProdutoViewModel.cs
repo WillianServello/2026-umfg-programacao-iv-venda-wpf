@@ -1,6 +1,7 @@
-﻿using projetoVendas.Interfaces;
+﻿using projetoVendas.Abstract;
+using projetoVendas.Commands;
+using projetoVendas.Interfaces;
 using projetoVendas.Models;
-using projetoVendas.Models.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -35,6 +36,13 @@ namespace projetoVendas.ViewModels
             get => _pedido;
             set => SetField(ref _pedido, value);
         }
+
+        public AdicionarProdutoPedidoCommand Adicionar { get; private set; } = new();
+
+        public RemoverProdutoPedidoCommand Remover { get; private set; } = new();
+
+        public ReceberPedidoCommand Receber { get; private set; } = new();
+
         public ListarProdutoViewModel(IObserver observer, UserControl userControl) : base("Produtos")
         {
             UserControl = userControl;

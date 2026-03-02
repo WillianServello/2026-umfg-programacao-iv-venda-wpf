@@ -1,6 +1,6 @@
-﻿using projetoVendas.Commands;
+﻿using projetoVendas.Abstract;
+using projetoVendas.Commands;
 using projetoVendas.Interfaces;
-using projetoVendas.Models.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;

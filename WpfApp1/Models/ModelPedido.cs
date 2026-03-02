@@ -1,4 +1,4 @@
-﻿using projetoVendas.Models.Abstract;
+﻿using projetoVendas.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

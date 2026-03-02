@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace projetoVendas.Models.Abstract
+namespace projetoVendas.Abstract
 {
     internal abstract class AbstractCommand : AbstractNotifyPropertyChange, ICommand
     {

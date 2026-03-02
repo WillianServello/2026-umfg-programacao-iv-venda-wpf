@@ -1,4 +1,4 @@
-﻿using projetoVendas.Models.Abstract;
+﻿using projetoVendas.Abstract;
 using projetoVendas.UserControls;
 using projetoVendas.ViewModels;
 using System;

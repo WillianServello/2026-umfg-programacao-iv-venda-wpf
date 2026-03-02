@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace projetoVendas.Models.Abstract
+namespace projetoVendas.Abstract
 {
     internal abstract class AbstractNotifyPropertyChange : INotifyPropertyChanged
     {
