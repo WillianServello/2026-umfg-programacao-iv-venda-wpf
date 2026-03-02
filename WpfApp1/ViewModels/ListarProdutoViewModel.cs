@@ -17,6 +17,7 @@ namespace projetoVendas.ViewModels
     {
         private ModelProduto _produtoSelecionado = new();
         private ObservableCollection<ModelProduto> _produtos = [];
+        private ModelPedido _pedido = new();
 
         public ModelProduto ProdutoSelecionado
         {
@@ -29,6 +30,11 @@ namespace projetoVendas.ViewModels
             set => SetField(ref _produtos, value);
         }
 
+        public ModelPedido Pedido
+        {
+            get => _pedido;
+            set => SetField(ref _pedido, value);
+        }
         public ListarProdutoViewModel(IObserver observer, UserControl userControl) : base("Produtos")
         {
             UserControl = userControl;
@@ -41,15 +47,6 @@ namespace projetoVendas.ViewModels
         private void CarregarProdutos()
         {
             Produtos.Clear();
-
-            Produtos.Add(new ModelProduto()
-            {
-               
-                Imagem = new BitmapImage(new Uri(@"..\net8.0-windows\Imagens\batata.png", UriKind.Relative)),
-                Descricao = "Batata Frita 300gr",
-                Referencia = "0001",
-                Valor = 10.90m,
-            });
 
             Produtos.Add(new ModelProduto()
             {
