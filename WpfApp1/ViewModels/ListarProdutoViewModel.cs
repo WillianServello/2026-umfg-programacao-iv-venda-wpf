@@ -51,7 +51,12 @@ namespace projetoVendas.ViewModels
             Add(observer);
             CarregarProdutos();
         }
-
+        public void RaiseCanExecuteChanged()
+        {
+            Adicionar.RaiseCanExecuteChanged();
+            Remover.RaiseCanExecuteChanged() ;
+            //Receber.RaiseCanExecuteChanged();
+        }
         private void CarregarProdutos()
         {
             Produtos.Clear();

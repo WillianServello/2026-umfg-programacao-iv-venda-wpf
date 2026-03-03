@@ -62,3 +62,5 @@ C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda
 C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\obj\Debug\net8.0-windows\projetoVendas.pdb
 C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\obj\Debug\net8.0-windows\projetoVendas.genruntimeconfig.cache
 C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\obj\Debug\net8.0-windows\ref\projetoVendas.dll
+C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\obj\Debug\net8.0-windows\UserControls\ucReceberPedido.g.cs
+C:\Users\facec.lab04\source\repos\WillianServello\2026-umfg-programacao-iv-venda-wpf\WpfApp1\obj\Debug\net8.0-windows\UserControls\ucReceberPedido.baml

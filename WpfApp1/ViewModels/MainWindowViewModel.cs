@@ -33,6 +33,8 @@ namespace projetoVendas.ViewModels
         {
             if (subject is ListarProdutoViewModel)
                 UserControl = (subject as ListarProdutoViewModel).UserControl;
+            if (subject is ReceberPedidoViewModel)
+                UserControl = (subject as ReceberPedidoViewModel).UserControl;
         }
     }
 } 

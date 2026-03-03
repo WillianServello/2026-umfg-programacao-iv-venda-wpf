@@ -37,13 +37,21 @@ namespace projetoVendas.Commands
             }
             //testa se o item selecionado pelo usuario consta na lista de itens do pedido
             //utilizado a passagem instrucao lambda no metodo Any()
-            if (vm.Pedido.Produtos.Any(x => x.Id == vm.ProdutoSelecionado.Id))
+            if (!vm.Pedido.Produtos.Any(x => x.Id == vm.ProdutoSelecionado.Id))
+            {
+                return;
+            }
+
+            var result =
+                MessageBox.Show("Deseja realmente remover este item no carrinho?", "Confirma produto", MessageBoxButton.YesNo);
+            if (!MessageBoxResult.Yes.Equals(result))
             {
                 return;
             }
 
             vm.Pedido.Produtos.Remove(vm.ProdutoSelecionado);
             vm.Pedido.Total = vm.Pedido.Produtos.Sum(x => x.Valor);
+            vm.RaiseCanExecuteChanged();
         }
     }
 }

@@ -45,6 +45,7 @@ namespace projetoVendas.Commands
             }
             vm.Pedido.Produtos.Add(vm.ProdutoSelecionado); //Adicionar o produto selecionado no pedido
             vm.Pedido.Total = vm.Pedido.Produtos.Sum(x => x.Valor); // atualizar o sub-total do pedido
+            vm.RaiseCanExecuteChanged();
         }
     }
 }
