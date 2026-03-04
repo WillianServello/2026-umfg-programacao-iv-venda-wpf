@@ -53,7 +53,7 @@ namespace projetoVendas.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/projetoVendas;component/usercontrols/ucreceberpedido.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/projetoVendas;V1.0.0.0;component/usercontrols/ucreceberpedido.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UserControls\ucReceberPedido.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
