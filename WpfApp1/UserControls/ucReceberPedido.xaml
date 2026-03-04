@@ -18,10 +18,16 @@
                 <ColumnDefinition MinWidth="500" MaxWidth="500"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
-                <DataGrid ItemsSource="{Binding Pedido.Produtos}" HeadersVisibility="None" 
-                          AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                          GridLinesVisibility="None" CanUserSortColumns="False">
+            <StackPanel Grid.Row="0" 
+                        Grid.Column="0" 
+                        Orientation="Horizontal">
+                <DataGrid ItemsSource="{Binding Pedido.Produtos}" 
+                          HeadersVisibility="None" 
+                          AutoGenerateColumns="False" 
+                          HorizontalAlignment="Stretch" 
+                          VerticalAlignment="Stretch"
+                          GridLinesVisibility="None" 
+                          CanUserSortColumns="False">
 
                     <DataGrid.Resources>
                         <Style TargetType="DataGrid">
@@ -30,8 +36,8 @@
 
                         <Style TargetType="DataGridCell">
                             <Setter Property="BorderThickness"  Value="0"/>
-                            <Setter Property="BorderBrush"  Value="#ECF0F1"/>
-                            <Setter Property="Background"  Value="#ECF0F1"/>
+                            <Setter Property="BorderBrush"  Value="#E0E0E0"/>
+                            <Setter Property="Background"  Value="#E0E0E0"/>
                             <Setter Property="Foreground"  Value="Black"/>
 
                             <Style.Triggers>
@@ -39,7 +45,6 @@
                                     <Setter Property="BorderBrush" Value="#E0E0E0"/>
                                     <Setter Property="Background" Value="#E0E0E0"/>
                                     <Setter Property="Foreground" Value="White"/>
-
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -58,9 +63,103 @@
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Width="300">
+                            <DataGridTemplateColumn.CellEditingTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock
+                                            Text="{Binding Referencia}"
+                                            FontWeight="SemiBold"
+                                            FontSize="24"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Left"/>
+                                        <TextBlock
+                                            Text="{Binding Descricao}"
+                                            FontWeight="SemiBold"
+                                            FontSize="24"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Left"
+                                            TextWrapping="Wrap"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellEditingTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellEditingTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical">
+
+                                        <TextBlock
+                                            Text="R$"
+                                            FontWeight="ExtraBold"
+                                            FontSize="24"
+                                            VerticalAlignment="Center"/>
+
+                                        <TextBlock
+                                            Text="{Binding Valor}"
+                                            FontWeight="ExtraBold"
+                                            FontSize="24"
+                                            VerticalAlignment="Center"
+                                            TextWrapping="Wrap"/>
+                                        
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellEditingTemplate>
+                        </DataGridTemplateColumn>
+
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
+            
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical">
+                <ComboBox FontSize="24"
+                          FontWeight="SemiBold"
+                          SelectedIndex="0"
+                          Width="500">
+
+                    <ComboBoxItem Content="Selecione um Cartão"/>
+                    <ComboBoxItem Content="Cartão de Crédito"/>
+                    <ComboBoxItem Content="Cartão de Débito"/>
+                    
+                </ComboBox>
+
+                
+                
+                <TextBlock Text="Número do Cartão"
+                           FontSize="24"
+                           FontWeight="SemiBold"/>
+                
+                <TextBox Text="{Binding NumeroCartao, 
+                                Mode=TwoWay, 
+                                UpdateSourceTrigger=PropertyChanged}"
+                                FontSize="24"
+                                FontWeight="SemiBold"/>
+
+                <TextBlock Text="Data de Válidade"
+                           FontSize="24"
+                           FontWeight="SemiBold"/>
+                
+                <TextBox Text="{Binding DataValidade, 
+                                Mode=TwoWay, 
+                                UpdateSourceTrigger=PropertyChanged}"
+                                FontSize="24"
+                                FontWeight="SemiBold"/>
+
+                <TextBlock Text="Nome do Cartão"
+                           FontSize="24"
+                           FontWeight="SemiBold"/>
+                
+                <TextBox Text="{Binding Nome, 
+                                Mode=TwoWay, 
+                                UpdateSourceTrigger=PropertyChanged}"
+                                FontSize="24"
+                                FontWeight="SemiBold"/>
+                
+                
+            </StackPanel>
+            
         </Grid>
     </Viewbox>
     
