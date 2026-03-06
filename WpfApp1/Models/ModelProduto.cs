@@ -14,9 +14,9 @@ namespace projetoVendas.Models
         // ViewModel - Parecido com UMA capa de folha.
         private Guid _id = Guid.NewGuid();
         private ImageSource _imagem;
-        private string _referencia;
-        private string _descricao;
-        private decimal _valor;
+        private string _referencia = string.Empty;
+        private string _descricao = string.Empty;
+        private decimal _valor = decimal.Zero;
 
         // Model
         public Guid Id 
