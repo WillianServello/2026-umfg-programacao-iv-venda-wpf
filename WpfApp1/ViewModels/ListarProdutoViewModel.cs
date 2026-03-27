@@ -23,18 +23,18 @@ namespace projetoVendas.ViewModels
         public ModelProduto ProdutoSelecionado
         {
             get => _produtoSelecionado;
-            set => SetField(ref _produtoSelecionado, value);
+            set => SetField(ref _produtoSelecionado, value, true);
         }
         public ObservableCollection<ModelProduto> Produtos
         {
             get => _produtos;
-            set => SetField(ref _produtos, value);
+            set => SetField(ref _produtos, value,true);
         }
 
         public ModelPedido Pedido
         {
             get => _pedido;
-            set => SetField(ref _pedido, value);
+            set => SetField(ref _pedido, value, true);
         }
 
         public AdicionarProdutoPedidoCommand Adicionar { get; private set; } = new();

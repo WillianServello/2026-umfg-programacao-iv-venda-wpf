@@ -288,18 +288,38 @@
                                             </Grid.RowDefinitions>
 
                                             <!-- COMBO BOX -->
-                                            <Border Grid.Row="0" Background="#ccc"
-                                                    Padding="15"
-                                                    CornerRadius="5">
-                                                <ComboBox FontSize="24"
-                                                          FontWeight="SemiBold"
-                                                          SelectedIndex="0"
-                                                          Background="Transparent">
-                                                    <ComboBoxItem Content="Selecione um Cartão"/>
-                                                    <ComboBoxItem Content="Cartão de Crédito"/>
-                                                    <ComboBoxItem Content="Cartão de Débito"/>
-                                                </ComboBox>
+                                            <Border Grid.Row="0" Background="#ccc" CornerRadius="5" Padding="5">
+
+                                                <StackPanel>
+                                                    <Border Background="White"
+                                                            CornerRadius="5">
+                                                        
+                                                        <ComboBox x:Name="ComboCartao"
+                                                                  BorderThickness="0"
+                                                                  Background="Transparent"
+                                                                  FontSize="20"
+                                                                  Padding="10"
+                                                                  materialDesign:HintAssist.Hint="Selecione um Cartão"
+                                                                  Validation.ErrorTemplate="{x:Null}"
+                                                                  ItemsSource="{Binding TiposCartao}"
+                                                                  SelectedItem="{Binding CartaoSelecionado,
+                                                                               UpdateSourceTrigger=PropertyChanged,
+                                                                               ValidatesOnNotifyDataErrors=True}"
+                                                                   LostFocus="ComboBox_LostFocus"/>
+                                                    </Border>
+                                                    
+                                                    <!-- Validação igual no razor que consegue puxar direto -->
+                                                    
+                                                    <TextBlock  
+                                                        Text="{Binding ElementName=ComboCartao, Path=(Validation.Errors)[0].ErrorContent}"
+                                                        Foreground="Red"
+                                                        FontSize="18"
+                                                        FontWeight="SemiBold"
+                                                        Margin="5,5,0,0"/>          
+
+                                                </StackPanel>
                                             </Border>
+
 
                                             <!-- NUMERO CARTAO -->
                                             <Grid Grid.Row="1" Margin="0,10,0,0">

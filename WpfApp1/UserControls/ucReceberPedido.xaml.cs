@@ -23,6 +23,20 @@ namespace projetoVendas.UserControls
     /// </summary>
     public partial class ucReceberPedido : UserControl
     {
+
+        //Isso daqui é pra validação, pra quando a pessoa clicar e não selecionar, indicar que ela deve escolher
+        public ucReceberPedido()
+        {
+            InitializeComponent();
+        }
+
+        private void ComboBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is ReceberPedidoViewModel vm)
+            {
+                vm.Validar();
+            }
+        }
         private ucReceberPedido(IObserver observer, ModelPedido pedido)
         {
             InitializeComponent();

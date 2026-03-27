@@ -22,26 +22,26 @@ namespace projetoVendas.Models
         public Guid Id 
         { 
             get => _id;
-            set => SetField(ref _id, value);
+            set => SetField(ref _id, value, true);
         }
         public ImageSource Imagem 
         { 
             get => _imagem; 
-            set => SetField(ref _imagem, value);
+            set => SetField(ref _imagem, value, true);
         }
         public string Referencia 
         { 
             get => _referencia;
-            set => SetField(ref _referencia, value);
+            set => SetField(ref _referencia, value, true);
         }
         public string Descricao { 
             get => _descricao; 
-            set => SetField(ref _descricao, value);
+            set => SetField(ref _descricao, value, true);
         } 
         public decimal Valor 
         { 
             get => _valor; 
-            set => SetField(ref _valor, value);
+            set => SetField(ref _valor, value, true);
         }
         
 

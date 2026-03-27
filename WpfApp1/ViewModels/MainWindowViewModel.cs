@@ -19,7 +19,7 @@ namespace projetoVendas.ViewModels
         public UserControl UserControl
         {
             get => _userControl;
-            set => SetField(ref _userControl, value);
+            set => SetField(ref _userControl, value, true);
         }
 
         public ListarProdutosCommand ListarProdutos { get; private set; } = new();

@@ -1,9 +1,12 @@
-﻿using projetoVendas.Interfaces;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using projetoVendas.Interfaces;
+using projetoVendas.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace projetoVendas.Abstract
@@ -18,9 +21,9 @@ namespace projetoVendas.Abstract
         public string Titulo
         {
             get => _titulo;
-            set => SetField(ref _titulo, value);
+            set => SetField(ref _titulo, value, true);
         }
-
+        
         public UserControl UserControl { get; protected set; }
 
         public IObserver MainWindow { get; protected set; }

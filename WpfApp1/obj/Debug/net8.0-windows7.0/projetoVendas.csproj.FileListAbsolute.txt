@@ -70,3 +70,6 @@ C:\Users\WillianRafael\Desktop\WPF\2026-umfg-programacao-iv-venda-wpf\WpfApp1\ob
 C:\Users\WillianRafael\Desktop\WPF\2026-umfg-programacao-iv-venda-wpf\WpfApp1\obj\Debug\net8.0-windows7.0\projetoVendas.pdb
 C:\Users\WillianRafael\Desktop\WPF\2026-umfg-programacao-iv-venda-wpf\WpfApp1\obj\Debug\net8.0-windows7.0\projetoVendas.genruntimeconfig.cache
 C:\Users\WillianRafael\Desktop\WPF\2026-umfg-programacao-iv-venda-wpf\WpfApp1\obj\Debug\net8.0-windows7.0\ref\projetoVendas.dll
+C:\Users\WillianRafael\Desktop\WPF\2026-umfg-programacao-iv-venda-wpf\WpfApp1\bin\Debug\net8.0-windows7.0\CommunityToolkit.Mvvm.dll
+C:\Users\WillianRafael\Desktop\WPF\2026-umfg-programacao-iv-venda-wpf\WpfApp1\bin\Debug\net8.0-windows7.0\DevExpress.Data.v25.2.dll
+C:\Users\WillianRafael\Desktop\WPF\2026-umfg-programacao-iv-venda-wpf\WpfApp1\bin\Debug\net8.0-windows7.0\System.Drawing.Common.dll

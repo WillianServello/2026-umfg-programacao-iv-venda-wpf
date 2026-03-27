@@ -1,86 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\WillianRafael\\Desktop\\WPF\\2026-umfg-programacao-iv-venda-wpf\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|c:\\users\\willianrafael\\desktop\\wpf\\2026-umfg-programacao-iv-venda-wpf\\wpfapp1\\usercontrols\\ucreceberpedido.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|solutionrelative:wpfapp1\\usercontrols\\ucreceberpedido.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|c:\\users\\willianrafael\\desktop\\wpf\\2026-umfg-programacao-iv-venda-wpf\\wpfapp1\\usercontrols\\uclistarprodutos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|solutionrelative:wpfapp1\\usercontrols\\uclistarprodutos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|c:\\users\\willianrafael\\desktop\\wpf\\2026-umfg-programacao-iv-venda-wpf\\wpfapp1\\codigo.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|solutionrelative:wpfapp1\\codigo.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|c:\\users\\willianrafael\\desktop\\wpf\\2026-umfg-programacao-iv-venda-wpf\\wpfapp1\\codigonovo.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|solutionrelative:wpfapp1\\codigonovo.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 3,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CODIGONOVO.TXT",
-              "DocumentMoniker": "C:\\Users\\WillianRafael\\Desktop\\WPF\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\CODIGONOVO.TXT",
-              "RelativeDocumentMoniker": "WpfApp1\\CODIGONOVO.TXT",
-              "ToolTip": "C:\\Users\\WillianRafael\\Desktop\\WPF\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\CODIGONOVO.TXT",
-              "RelativeToolTip": "WpfApp1\\CODIGONOVO.TXT",
-              "ViewState": "AgIAAGkBAAAAAAAAAAAIwKEBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-03-26T20:13:38.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ucListarProdutos.xaml",
-              "DocumentMoniker": "C:\\Users\\WillianRafael\\Desktop\\WPF\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucListarProdutos.xaml",
-              "RelativeDocumentMoniker": "WpfApp1\\UserControls\\ucListarProdutos.xaml",
-              "ToolTip": "C:\\Users\\WillianRafael\\Desktop\\WPF\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucListarProdutos.xaml",
-              "RelativeToolTip": "WpfApp1\\UserControls\\ucListarProdutos.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-26T18:52:49.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "codigo.txt",
-              "DocumentMoniker": "C:\\Users\\WillianRafael\\Desktop\\WPF\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\codigo.txt",
-              "RelativeDocumentMoniker": "WpfApp1\\codigo.txt",
-              "ToolTip": "C:\\Users\\WillianRafael\\Desktop\\WPF\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\codigo.txt",
-              "RelativeToolTip": "WpfApp1\\codigo.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-03-25T18:54:28.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ucReceberPedido.xaml",
-              "DocumentMoniker": "C:\\Users\\WillianRafael\\Desktop\\WPF\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml",
-              "RelativeDocumentMoniker": "WpfApp1\\UserControls\\ucReceberPedido.xaml",
-              "ToolTip": "C:\\Users\\WillianRafael\\Desktop\\WPF\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml",
-              "RelativeToolTip": "WpfApp1\\UserControls\\ucReceberPedido.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-25T18:52:22.641Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

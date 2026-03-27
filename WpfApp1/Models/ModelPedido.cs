@@ -17,17 +17,17 @@ namespace projetoVendas.Models
         public Guid Id 
         { 
             get => _id;
-            set => SetField(ref _id, value); 
+            set => SetField(ref _id, value, true); 
         }
         public decimal Total 
         { 
             get => _total; 
-            set => SetField(ref _total, value); 
+            set => SetField(ref _total, value, true); 
         }
         public ObservableCollection<ModelProduto> Produtos 
         { 
             get => _produtos; 
-            set => SetField(ref _produtos, value);
+            set => SetField(ref _produtos, value, true);
         }
 
 
