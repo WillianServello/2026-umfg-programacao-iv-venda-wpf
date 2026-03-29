@@ -34,9 +34,17 @@ namespace projetoVendas.UserControls
         {
             if (DataContext is ReceberPedidoViewModel vm)
             {
-                vm.Validar();
+                vm.ValidarCartaoSelecionado();
             }
         }
+        private void NumeroCartao_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is ReceberPedidoViewModel vm)
+            {
+                vm.ValidarNumeroCartao();
+            }
+        }
+        
         private ucReceberPedido(IObserver observer, ModelPedido pedido)
         {
             InitializeComponent();

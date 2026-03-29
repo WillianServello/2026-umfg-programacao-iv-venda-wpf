@@ -40,21 +40,27 @@ namespace projetoVendas.ViewModels
             set => SetField(ref _cartaoSelecionado, value, true);
         }
 
+        [Required(ErrorMessage = "Por favor informe o numero do cartão")]
+        [Range(1, long.MaxValue, ErrorMessage = "Número do cartão inválido")]
         public long NumeroCartao 
         { 
             get => _numeroCartao; 
             set => SetField(ref _numeroCartao, value, true);
         }
+
+        [Required(ErrorMessage = "Por favor informe o CVV")]
         public long CVV
         { 
             get => _cvv; 
             set => SetField(ref _cvv, value, true);
         }
+        [Required(ErrorMessage = "Por favor informe a data de validade")]
         public DateTime DataValidade
         {
             get => _dataValidade;
             set => SetField(ref _dataValidade, value, true);
         }
+        [Required(ErrorMessage = "Por favor informe o nome do cartão")]
         public string NomeCartao
         {
             get => _nomeCartao;
@@ -75,9 +81,21 @@ namespace projetoVendas.ViewModels
 
             Add(observer);
         }
-        public void Validar()
+        public void ValidarCartaoSelecionado()
         {
-            ValidateAllProperties();
+            ValidateProperty(CartaoSelecionado, nameof(CartaoSelecionado));
+        }
+        public void ValidarNumeroCartao()
+        {
+            ValidateProperty(NumeroCartao, nameof(NumeroCartao));
+        }
+        public void ValidarDataValidade()
+        {
+            ValidateProperty(CVV, nameof(CVV));
+        }
+        public void ValidarCVV()
+        {
+            ValidateProperty(CVV, nameof(CVV));
         }
     }
 }
