@@ -288,7 +288,7 @@
                                             </Grid.RowDefinitions>
 
                                             <!-- COMBO BOX -->
-                                            <Border Grid.Row="0" Background="#ccc" CornerRadius="5" Padding="5">
+                                            <Border Grid.Row="0"  CornerRadius="5" >
 
                                                 <StackPanel>
                                                     <Border Background="White"
@@ -313,68 +313,79 @@
                                                     <TextBlock  
                                                         Text="{Binding ElementName=ComboCartao, Path=(Validation.Errors)[0].ErrorContent}"
                                                         Foreground="Red"
-                                                        FontSize="18"
-                                                        FontWeight="SemiBold"
-                                                        Margin="5,5,0,0"/>          
+                                                        FontSize="15"
+                                                        FontWeight="UltraLight"
+                                                        Margin="10,0,0,0"/>          
 
                                                 </StackPanel>
                                             </Border>
 
 
                                             <!-- NUMERO CARTAO -->
-                                            <Grid Grid.Row="1" Margin="0,10,0,0">
-                                                <StackPanel>
-                                                    <TextBlock Text="Número do Cartão"
-                                                           FontSize="24"
-                                                           FontWeight="ExtraLight"/>
+                                            <Grid Grid.Row="1" Margin="0,0,0,0">
+                                                    <StackPanel>
+                                                        <TextBlock Text="Número do Cartão"
+                                                               FontSize="20"
+                                                               Margin="10,0,0,0"
+                                                               FontWeight="Light"/>
 
-                                                    <Border Padding="20" 
-                                                            Background="#ccc"
-                                                            CornerRadius="5">
+                                                        <Border Padding="0" 
+                                                                Background="White"
+                                                                CornerRadius="5">
 
-                                                        <TextBox Text="{Binding NumeroCartao,
-                                                                   Mode=TwoWay, 
-                                                                   UpdateSourceTrigger=PropertyChanged}"
-                                                                   FontSize="24"
-                                                                   FontWeight="SemiBold"/>
-                                                    </Border>
-                                                </StackPanel>
+                                                            <TextBox Text="{Binding NumeroCartao,
+                                                                       Mode=TwoWay, 
+                                                                       UpdateSourceTrigger=PropertyChanged}"
+                                                                       FontSize="20"
+                                                                       Padding="10"
+                                                                       BorderThickness="0"                                                                                    
+                                                                       FontWeight="Light"
+                                                                       />
+                                                        </Border>
+                                                    </StackPanel>
                                             </Grid>
 
                                             <!-- DATA -->
-                                            <StackPanel Grid.Row="2" Margin="0,10,0,0">
+                                            <StackPanel Grid.Row="2" Margin="0,15,0,0">
                                                 <TextBlock Text="Data de Válidade"
-                                                           FontSize="24"
-                                                           FontWeight="ExtraLight"/>
+                                                           FontSize="20"
+                                                           Margin="10,0,0,0"
+                                                           FontWeight="Light"/>
 
-                                                <Border Background="#ccc"
-                                                        Padding="20"
+                                                <Border Background="White"
                                                         CornerRadius="5">
 
                                                     <TextBox Text="{Binding DataValidade,
                                                                Mode=TwoWay, 
                                                                UpdateSourceTrigger=PropertyChanged}"
-                                                               FontSize="24"
-                                                               FontWeight="SemiBold"/>
+                                                               FontSize="20"
+                                                                Padding="10"
+                                                                BorderThickness="0"                                                                                    
+                                                                FontWeight="Light"
+                                                                />
                                                 </Border>
 
                                             </StackPanel>
                                             
                                             <!-- NOME CARTAO -->
-                                            <StackPanel Grid.Row="3" Margin="0,10,0,0">
+                                            <StackPanel Grid.Row="3" Margin="0,15,0,0">
                                                 <TextBlock Text="Nome Cartão"
-                                                           FontSize="24"
-                                                           FontWeight="ExtraLight"/>
+                                                           Margin="10,0,0,0"
+                                                           FontSize="20"
+                                                           FontWeight="Light"/>
 
-                                                <Border Background="#ccc"
-                                                        Padding="20"
+                                                <Border Background="White"
+                                                        Padding="0"
                                                         CornerRadius="5">
 
                                                     <TextBox Text="{Binding Nome,
                                                                Mode=TwoWay, 
                                                                UpdateSourceTrigger=PropertyChanged}"
-                                                               FontSize="24"
-                                                               FontWeight="SemiBold"/>
+                                                               FontSize="20"
+                                                                 Padding="10"
+                                                                 BorderThickness="0"                                                                                    
+                                                                 FontWeight="Light"
+                                                                 />
                                                 </Border>
 
                                             </StackPanel>
