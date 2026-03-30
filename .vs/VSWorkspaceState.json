@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\WpfApp1",
-    "\\WpfApp1\\UserControls"
+    "\\WpfApp1\\Abstract",
+    "\\WpfApp1\\UserControls",
+    "\\WpfApp1\\ViewModels"
   ],
-  "SelectedNode": "\\umfg-vendas.sln",
+  "SelectedNode": "\\WpfApp1\\UserControls\\ucReceberPedido.xaml",
   "PreviewInSolutionExplorer": false
 }

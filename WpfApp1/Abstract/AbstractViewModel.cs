@@ -50,5 +50,7 @@ namespace projetoVendas.Abstract
                 item.Update(this);
             }
         }
+
+       
     }
 }

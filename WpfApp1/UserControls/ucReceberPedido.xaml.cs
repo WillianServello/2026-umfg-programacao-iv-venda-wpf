@@ -25,11 +25,6 @@ namespace projetoVendas.UserControls
     {
 
         //Isso daqui é pra validação, pra quando a pessoa clicar e não selecionar, indicar que ela deve escolher
-        public ucReceberPedido()
-        {
-            InitializeComponent();
-        }
-
         private void ComboBox_LostFocus(object sender, RoutedEventArgs e)
         {
             if (DataContext is ReceberPedidoViewModel vm)
@@ -37,14 +32,57 @@ namespace projetoVendas.UserControls
                 vm.ValidarCartaoSelecionado();
             }
         }
-        private void NumeroCartao_LostFocus(object sender, RoutedEventArgs e)
+
+        private void ApenasNumero(object sender, TextCompositionEventArgs e)
         {
-            if (DataContext is ReceberPedidoViewModel vm)
-            {
-                vm.ValidarNumeroCartao();
-            }
+            e.Handled = !char.IsDigit(e.Text, 0);
         }
-        
+
+        private void FormatarValidade(object sender, TextChangedEventArgs e)
+        {
+            var textBox = sender as TextBox;
+
+            var texto = textBox.Text.Replace("/", "");
+
+            if (texto.Length > 2)
+                texto = texto.Insert(2, "/");
+
+            textBox.Text = texto;
+            textBox.SelectionStart = textBox.Text.Length;
+        }
+        //private void NumeroCartao_LostFocus(object sender, RoutedEventArgs e)
+        //{
+        //    if (DataContext is ReceberPedidoViewModel vm)
+        //    {
+        //        vm.ValidarNumeroCartao();
+        //    }
+        //}
+        //private void NomeCartao_LostFocus(object sender, RoutedEventArgs e)
+        //{
+        //    if (DataContext is ReceberPedidoViewModel vm)
+        //    {
+        //        vm.ValidarNomeCartao();
+        //    }
+        //}
+        //private void DataValidadePicker_LostFocus(object sender, RoutedEventArgs e)
+        //{
+        //    if (DataContext is ReceberPedidoViewModel vm)
+        //    {
+        //        vm.ValidarDataValidade();
+        //    }
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
         private ucReceberPedido(IObserver observer, ModelPedido pedido)
         {
             InitializeComponent();

@@ -527,23 +527,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\biaa\\.nuget\\packages\\": {},
+    "C:\\Users\\WillianRafael\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\biaa\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\projetoVendas.csproj",
+      "projectUniqueName": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\projetoVendas.csproj",
       "projectName": "projetoVendas",
-      "projectPath": "C:\\Users\\biaa\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\projetoVendas.csproj",
-      "packagesPath": "C:\\Users\\biaa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\biaa\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\obj\\",
+      "projectPath": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\projetoVendas.csproj",
+      "packagesPath": "C:\\Users\\WillianRafael\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\biaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\WillianRafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -552,6 +552,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

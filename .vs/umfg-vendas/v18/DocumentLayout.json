@@ -1,18 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\biaa\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\",
+  "WorkspaceRootPath": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|c:\\users\\biaa\\source\\repos\\willianservello\\2026-umfg-programacao-iv-venda-wpf\\wpfapp1\\usercontrols\\ucreceberpedido.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\2026-umfg-programacao-iv-venda-wpf\\wpfapp1\\usercontrols\\ucreceberpedido.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|solutionrelative:wpfapp1\\usercontrols\\ucreceberpedido.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|c:\\users\\biaa\\source\\repos\\willianservello\\2026-umfg-programacao-iv-venda-wpf\\wpfapp1\\viewmodels\\receberpedidoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|solutionrelative:wpfapp1\\viewmodels\\receberpedidoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|c:\\users\\biaa\\source\\repos\\willianservello\\2026-umfg-programacao-iv-venda-wpf\\wpfapp1\\usercontrols\\ucreceberpedido.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|solutionrelative:wpfapp1\\usercontrols\\ucreceberpedido.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +14,18 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ucReceberPedido.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\biaa\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\UserControls\\ucReceberPedido.xaml.cs",
-              "ToolTip": "C:\\Users\\biaa\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml.cs",
-              "RelativeToolTip": "WpfApp1\\UserControls\\ucReceberPedido.xaml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAowDEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T13:38:58.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReceberPedidoViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\biaa\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\ViewModels\\ReceberPedidoViewModel.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\ViewModels\\ReceberPedidoViewModel.cs",
-              "ToolTip": "C:\\Users\\biaa\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\ViewModels\\ReceberPedidoViewModel.cs",
-              "RelativeToolTip": "WpfApp1\\ViewModels\\ReceberPedidoViewModel.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAIwFUAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T13:31:59.941Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ucReceberPedido.xaml",
-              "DocumentMoniker": "C:\\Users\\biaa\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\UserControls\\ucReceberPedido.xaml",
-              "ToolTip": "C:\\Users\\biaa\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml",
+              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml",
               "RelativeToolTip": "WpfApp1\\UserControls\\ucReceberPedido.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-29T13:34:50.375Z",
+              "WhenOpened": "2026-03-30T20:01:53.349Z",
               "EditorCaption": ""
             }
           ]
