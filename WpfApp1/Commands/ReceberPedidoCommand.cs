@@ -16,7 +16,9 @@ namespace projetoVendas.Commands
         //TODO: habilitar este botão apenas quando um produto for adicionado no carrinho
         public override bool CanExecute(object? parameter)
         {
-            return base.CanExecute(parameter);
+            var vm = parameter as ListarProdutoViewModel;
+
+            return vm is not null && vm.Pedido.Produtos.Any();
         }
 
         public override void Execute(object? parameter)
@@ -25,11 +27,7 @@ namespace projetoVendas.Commands
 
             //Para o usuario final em teoria nao importa esse teste
             //mas é fundamental para garantir a qualidade de codigo a longo prazo
-            if (vm is null)
-            {
-                MessageBox.Show("Parâmetro obrigatorio não informado! Verifique.");
-                return;
-            }
+            
 
             ucReceberPedido.Exibir(vm.MainWindow, vm.Pedido);
 

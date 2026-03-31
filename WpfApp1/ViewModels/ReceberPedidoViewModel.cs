@@ -42,25 +42,34 @@ namespace projetoVendas.ViewModels
         {
             get => _cartaoSelecionado;
             set => SetField(ref _cartaoSelecionado, value, true);
-        } 
+        }
 
         [Required(ErrorMessage = "Por favor informe o nome do cartão")]
+        [RegularExpression(@"^[A-Za-zÀ-ÿ\s]+$", ErrorMessage = "Apenas letras são permitidas")]
+        [StringLength(26, MinimumLength = 2, ErrorMessage = "Informe com tamanho válido")]
         public string? NomeCartao
         {
             get => _nomeCartao;
             set => SetField(ref _nomeCartao, value, true);
         }
-
+        
+        // NUMERO CARTAO - USANDO O LUHN, RAPAZ E BOM DEMAIS ESSE DATAANNOTATION
         [Required(ErrorMessage = "Por favor informe o numero do cartão")]
+        [RegularExpression(@"^[0-9 ]+$", ErrorMessage = "Apenas números")]
+        [StringLength(19, MinimumLength = 13, ErrorMessage = "Tamanho inválido")]
+        [CustomValidation(typeof(ValidadorCartao), nameof(ValidadorCartao.ValidarLuhn))]
         public string? NumeroCartao
         {
             get => _numeroCartao;
-            set => SetField(ref _numeroCartao, value, true);
+            set {
+                SetField(ref _numeroCartao, value, true);
+                ValidateProperty(value, nameof(NumeroCartao));
+            }
         }
 
         // DATA VALIDADE
         [Required(ErrorMessage = "Por favor informe a data de validade")]
-        [RegularExpression(@"^(0[1-9]|1[0-2])\/\d{2}$", ErrorMessage = "Formato inválido (MM/YY)")]
+        [RegularExpression(@"^(0[1-9]|1[0-2])\/\d{4}$", ErrorMessage = "Formato inválido (MM/YYYY)")]
         [CustomValidation(typeof(ValidadorCartao), nameof(ValidadorCartao.ValidarData))]
         public string? DataValidade
         {
@@ -70,32 +79,11 @@ namespace projetoVendas.ViewModels
                 SetField(ref _dataValidade, value, true);
                 ValidateProperty(value, nameof(DataValidade));
             }
-
         }
-        // CONVERTIDA DATA POR QUE ESTOU USANDO STRING PRA PEGAR MAIS FACIL DO FRONT, SE PRECISAR
-        //public DateTime? DataValidadeConvertida
-        //{
-        //    get
-        //    {
-        //        if (string.IsNullOrWhiteSpace(DataValidade))
-        //            return null;
 
-        //        var partes = DataValidade.Split('/');
-
-        //        if (partes.Length != 2)
-        //            return null;
-
-        //        if (!int.TryParse(partes[0], out int mes) ||
-        //            !int.TryParse(partes[1], out int ano))
-        //            return null;
-
-        //        ano += 2000; // transforma 26 em 2026
-
-        //        return new DateTime(ano, mes, 1);
-        //    }
-        //}
-
+        // CVV
         [Required(ErrorMessage = "Por favor informe o CVV")]
+        [StringLength(3, MinimumLength = 3, ErrorMessage = "CVV deve conter 3 caracteres") ]
         public string? CVV
         { 
             get => _cvv; 
@@ -119,18 +107,6 @@ namespace projetoVendas.ViewModels
         public void ValidarCartaoSelecionado()
         {
             ValidateProperty(CartaoSelecionado, nameof(CartaoSelecionado));
-        }
-        public void ValidarNumeroCartao()
-        {
-            ValidateProperty(NumeroCartao, nameof(NumeroCartao));
-        }
-        public void ValidarNomeCartao()
-        {
-            ValidateProperty(NomeCartao, nameof(NomeCartao));
-        }
-        public void ValidarCVV()
-        {
-            ValidateProperty(CVV, nameof(CVV));
         }
     }
 }

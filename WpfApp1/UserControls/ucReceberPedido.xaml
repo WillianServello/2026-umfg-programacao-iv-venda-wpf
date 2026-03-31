@@ -363,6 +363,8 @@
                                                             UpdateSourceTrigger=PropertyChanged,
                                                             ValidatesOnNotifyDataErrors=True}"
                                                             materialDesign:HintAssist.Hint="Informe o número do Cartão"
+                                                            TextChanged="FormatarCartao"
+                                                            PreviewTextInput="ApenasNumero"
                                                             Validation.ErrorTemplate="{x:Null}"
                                                             FontSize="20"
                                                             Padding="10"
@@ -397,6 +399,7 @@
                                                         UpdateSourceTrigger=PropertyChanged,
                                                         ValidatesOnNotifyDataErrors=True}"
                                                         materialDesign:HintAssist.Hint="Informe o nome do cartão"
+                                                        PreviewTextInput="ApenasLetras"
                                                         Validation.ErrorTemplate="{x:Null}"
                                                         FontSize="20"
                                                         Padding="10"
@@ -429,7 +432,7 @@
                                                         ValidatesOnNotifyDataErrors=True}"
                                                         PreviewTextInput="ApenasNumero"
                                                         TextChanged="FormatarValidade"
-                                                        MaxLength="5"
+                                                        MaxLength="7"
                                                       
                                                         materialDesign:HintAssist.Hint="Informe a data de validade"
                                                         Validation.ErrorTemplate="{x:Null}"
@@ -466,6 +469,9 @@
                                                         ValidatesOnNotifyDataErrors=True}"
                                                         materialDesign:HintAssist.Hint="Informe o CVV"
                                                         Validation.ErrorTemplate="{x:Null}"
+                                                        PreviewTextInput="ApenasNumero"
+                                                        TextChanged="RemoverEspacos"
+                                                        MaxLength="3"
                                                         FontSize="20"
                                                         Padding="10"
                                                         BorderThickness="0"                                                                                    
@@ -488,42 +494,69 @@
                                              CornerRadius="10"
                                              Margin="10"
                                              VerticalAlignment="Bottom"
-                                             Style="{StaticResource ShadowBorderStyle}">
+                                             Style="{StaticResource SombraEstatica}">
 
 
                                         <Grid>
+
                                             <Grid.RowDefinitions>
                                                 <RowDefinition/>
+                                                <RowDefinition/>
                                             </Grid.RowDefinitions>
-
-                                            <Border VerticalAlignment="Bottom" 
-                                                        Padding="50"
-                                                        Background="#ccc" 
+                                            
+                                            <Border Grid.Row="0" VerticalAlignment="Bottom" 
+                                                        Padding="20"
+                                                        Background="White" 
                                                         CornerRadius="10">
+                                                <StackPanel>
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="*"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                        </Grid.ColumnDefinitions>
+                                                    
+                                                    
 
-                                                <Grid>
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="Auto"/>
-                                                        <ColumnDefinition Width="*"/>
-                                                        <ColumnDefinition Width="Auto"/>
-                                                    </Grid.ColumnDefinitions>
+                                                        <TextBlock Grid.Column="0" Grid.Row="0"
+                                                                       Text="Valor Total:"
+                                                                       HorizontalAlignment="Left"
+                                                                       VerticalAlignment="Center"
+                                                                       FontSize="20"
+                                                                       FontFamily="Arial"
+                                                                       FontWeight="Bold"/>
 
-                                                    <TextBlock Grid.Column="0" 
-                                                                   Text="Valor Total:"
-                                                                   HorizontalAlignment="Left"
-                                                                   VerticalAlignment="Center"
-                                                                   FontSize="20"
-                                                                   FontFamily="Arial"
-                                                                   FontWeight="Bold"/>
+                                                        <TextBlock Grid.Column="2" Grid.Row="0"
+                                                                       Text="{Binding Pedido.Total}"
+                                                                       HorizontalAlignment="Right"
+                                                                       VerticalAlignment="Center"
+                                                                       FontSize="20"
+                                                                       FontFamily="Segoe UI Light"/>
 
-                                                    <TextBlock Grid.Column="2" 
-                                                                   Text="{Binding Pedido.Total}"
-                                                                   HorizontalAlignment="Right"
-                                                                   VerticalAlignment="Center"
-                                                                   FontSize="20"
-                                                                   FontFamily="Segoe UI Light"/>
-                                                </Grid>
+                                                    </Grid>
+
+                                                    <Border 
+                                                        Grid.Row="1" 
+                                                        Height="50" 
+                                                        Background="Green" 
+                                                        CornerRadius="5" 
+                                                        Margin="0,10,0,0"
+                                                         Style="{StaticResource SombraComHover}">
+                                                        
+                                                        <TextBlock 
+                                                            Text="Confirmar Pedido?" 
+                                                            TextAlignment="Center" 
+                                                            HorizontalAlignment="Center" 
+                                                            VerticalAlignment="Center"
+                                                            Foreground="White"
+                                                            FontSize="18"
+                                                            FontWeight="Bold"/>
+                                                    </Border>
+                                                </StackPanel>
+                                               
                                             </Border>
+                                            
+
                                         </Grid>
                                     </Border>
 

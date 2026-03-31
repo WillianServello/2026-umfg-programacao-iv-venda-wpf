@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nPJ3EvyCqjs=",
+  "dgSpecHash": "aBSlqSdtQqE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\projetoVendas.csproj",
+  "projectFilePath": "C:\\Users\\WillianRafael\\Desktop\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\projetoVendas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WillianRafael\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512",
     "C:\\Users\\WillianRafael\\.nuget\\packages\\devexpress.data\\25.2.5\\devexpress.data.25.2.5.nupkg.sha512",

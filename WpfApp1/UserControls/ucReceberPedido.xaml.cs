@@ -33,11 +33,44 @@ namespace projetoVendas.UserControls
             }
         }
 
+        private void FormatarCartao(object sender, TextChangedEventArgs e)
+        {
+            var textBox = sender as TextBox;
+
+            // remove espaços
+            var texto = textBox.Text.Replace(" ", "");
+
+            // limita a 16 (ou pode usar 19 se quiser mais completo)
+            if (texto.Length > 16)
+                texto = texto.Substring(0, 16);
+
+            // adiciona espaço a cada 4 dígitos
+            var formatado = "";
+            for (int i = 0; i < texto.Length; i++)
+            {
+                if (i > 0 && i % 4 == 0)
+                    formatado += " ";
+
+                formatado += texto[i];
+            }
+
+            textBox.Text = formatado;
+            textBox.SelectionStart = textBox.Text.Length;
+        }
+
+        //Validacao de apenas Numeros
         private void ApenasNumero(object sender, TextCompositionEventArgs e)
         {
             e.Handled = !char.IsDigit(e.Text, 0);
         }
 
+        //Validacao de apenas letras
+        private void ApenasLetras(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.Text, 0);
+        }
+
+        //DATA VALIDADE LOGICA
         private void FormatarValidade(object sender, TextChangedEventArgs e)
         {
             var textBox = sender as TextBox;
@@ -49,40 +82,28 @@ namespace projetoVendas.UserControls
 
             textBox.Text = texto;
             textBox.SelectionStart = textBox.Text.Length;
+
+            //ESSE CARA FAZ COM QUE O USUARIO NAO CONSIGA DIGITAR ESPACO
+            if (textBox.Text.Contains(" "))
+            {
+                textBox.Text = textBox.Text.Replace(" ", "");
+                textBox.SelectionStart = textBox.Text.Length;
+            }
         }
-        //private void NumeroCartao_LostFocus(object sender, RoutedEventArgs e)
-        //{
-        //    if (DataContext is ReceberPedidoViewModel vm)
-        //    {
-        //        vm.ValidarNumeroCartao();
-        //    }
-        //}
-        //private void NomeCartao_LostFocus(object sender, RoutedEventArgs e)
-        //{
-        //    if (DataContext is ReceberPedidoViewModel vm)
-        //    {
-        //        vm.ValidarNomeCartao();
-        //    }
-        //}
-        //private void DataValidadePicker_LostFocus(object sender, RoutedEventArgs e)
-        //{
-        //    if (DataContext is ReceberPedidoViewModel vm)
-        //    {
-        //        vm.ValidarDataValidade();
-        //    }
-        //}
 
+        // CVV LOGICA
+     
+        // COPIEI DO DE CIMA JA QUE E A MESMA COISA SO QUE PRO CVV
+        private void RemoverEspacos(object sender, TextChangedEventArgs e)
+        {
+            var textBox = sender as TextBox;
 
-
-
-
-
-
-
-
-
-
-
+            if (textBox.Text.Contains(" "))
+            {
+                textBox.Text = textBox.Text.Replace(" ", "");
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
         private ucReceberPedido(IObserver observer, ModelPedido pedido)
         {
             InitializeComponent();

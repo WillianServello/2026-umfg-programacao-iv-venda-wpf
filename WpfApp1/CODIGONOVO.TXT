@@ -415,3 +415,32 @@
         </Border>
     </Grid>
 </UserControl>
+
+
+
+
+
+
+
+// CONVERTIDA DATA POR QUE ESTOU USANDO STRING PRA PEGAR MAIS FACIL DO FRONT, SE PRECISAR
+        //public DateTime? DataValidadeConvertida
+        //{
+        //    get
+        //    {
+        //        if (string.IsNullOrWhiteSpace(DataValidade))
+        //            return null;
+
+        //        var partes = DataValidade.Split('/');
+
+        //        if (partes.Length != 2)
+        //            return null;
+
+        //        if (!int.TryParse(partes[0], out int mes) ||
+        //            !int.TryParse(partes[1], out int ano))
+        //            return null;
+
+        //        ano += 2000; // transforma 26 em 2026
+
+        //        return new DateTime(ano, mes, 1);
+        //    }
+        //}

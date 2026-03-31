@@ -55,7 +55,7 @@ namespace projetoVendas.ViewModels
         {
             Adicionar.RaiseCanExecuteChanged();
             Remover.RaiseCanExecuteChanged() ;
-            //Receber.RaiseCanExecuteChanged();
+            Receber.RaiseCanExecuteChanged();
         }
         private void CarregarProdutos()
         {

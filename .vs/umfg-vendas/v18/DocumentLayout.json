@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\",
+  "WorkspaceRootPath": "C:\\Users\\WillianRafael\\Desktop\\2026-umfg-programacao-iv-venda-wpf\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|c:\\users\\willianrafael\\source\\repos\\willianservello\\2026-umfg-programacao-iv-venda-wpf\\wpfapp1\\usercontrols\\ucreceberpedido.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|c:\\users\\willianrafael\\desktop\\2026-umfg-programacao-iv-venda-wpf\\wpfapp1\\usercontrols\\ucreceberpedido.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B9477A01-6A58-4D84-8479-2093AD7FF653}|WpfApp1\\projetoVendas.csproj|solutionrelative:wpfapp1\\usercontrols\\ucreceberpedido.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -20,12 +20,12 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ucReceberPedido.xaml",
-              "DocumentMoniker": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml",
+              "DocumentMoniker": "C:\\Users\\WillianRafael\\Desktop\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\UserControls\\ucReceberPedido.xaml",
-              "ToolTip": "C:\\Users\\WillianRafael\\source\\repos\\WillianServello\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml",
+              "ToolTip": "C:\\Users\\WillianRafael\\Desktop\\2026-umfg-programacao-iv-venda-wpf\\WpfApp1\\UserControls\\ucReceberPedido.xaml",
               "RelativeToolTip": "WpfApp1\\UserControls\\ucReceberPedido.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-30T20:01:53.349Z",
+              "WhenOpened": "2026-03-31T16:10:48.348Z",
               "EditorCaption": ""
             }
           ]
