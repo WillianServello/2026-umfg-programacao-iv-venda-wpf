@@ -22,6 +22,10 @@ namespace projetoVendas.UserControls
     /// </summary>
     public partial class ucListarProdutos : UserControl
     {
+        public ucListarProdutos()
+        {
+        }
+
         private ucListarProdutos(IObserver observer)
         {
             InitializeComponent();

@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using projetoVendas.Abstract;
+using projetoVendas.Commands;
 using projetoVendas.Interfaces;
 using projetoVendas.Models;
 using projetoVendas.Validador;
@@ -30,7 +31,16 @@ namespace projetoVendas.ViewModels
         private string? _nomeCartao = string.Empty;
 
 
+        public FinalizarPedidoCommand Finalizar { get; private set; } = new();
+        public void ValidarTudo()
+        {
+            ValidateAllProperties();
+        }
 
+        public void RaiseCanExecuteChanged()
+        {
+            Finalizar.RaiseCanExecuteChanged();
+        }
         public List<string> TiposCartao
         {
             get => _tiposCartao;
@@ -41,7 +51,12 @@ namespace projetoVendas.ViewModels
         public string? CartaoSelecionado
         {
             get => _cartaoSelecionado;
-            set => SetField(ref _cartaoSelecionado, value, true);
+            set
+            {
+                SetField(ref _cartaoSelecionado, value, true);
+                ValidateProperty(value, nameof(CartaoSelecionado));
+                RaiseCanExecuteChanged();
+            }
         }
 
         [Required(ErrorMessage = "Por favor informe o nome do cartão")]
@@ -50,7 +65,13 @@ namespace projetoVendas.ViewModels
         public string? NomeCartao
         {
             get => _nomeCartao;
-            set => SetField(ref _nomeCartao, value, true);
+            set
+            {
+                SetField(ref _nomeCartao, value, true);
+                ValidateProperty(value, nameof(NomeCartao));
+                RaiseCanExecuteChanged();
+            }
+
         }
         
         // NUMERO CARTAO - USANDO O LUHN, RAPAZ E BOM DEMAIS ESSE DATAANNOTATION
@@ -64,6 +85,7 @@ namespace projetoVendas.ViewModels
             set {
                 SetField(ref _numeroCartao, value, true);
                 ValidateProperty(value, nameof(NumeroCartao));
+                RaiseCanExecuteChanged();
             }
         }
 
@@ -78,6 +100,7 @@ namespace projetoVendas.ViewModels
             {
                 SetField(ref _dataValidade, value, true);
                 ValidateProperty(value, nameof(DataValidade));
+                RaiseCanExecuteChanged();
             }
         }
 
@@ -86,8 +109,13 @@ namespace projetoVendas.ViewModels
         [StringLength(3, MinimumLength = 3, ErrorMessage = "CVV deve conter 3 caracteres") ]
         public string? CVV
         { 
-            get => _cvv; 
-            set => SetField(ref _cvv, value, true);
+            get => _cvv;
+            set
+            {
+                SetField(ref _cvv, value, true);
+                ValidateProperty(value, nameof(CVV));
+                RaiseCanExecuteChanged();
+            }
         }
 
         public ModelPedido Pedido
@@ -100,7 +128,7 @@ namespace projetoVendas.ViewModels
         {
             UserControl = userControl ?? throw new ArgumentNullException(nameof(userControl));
             MainWindow = observer ?? throw new ArgumentNullException(nameof(observer));
-            Pedido = pedido ?? throw new ArgumentNullException(nameof(observer)); 
+            Pedido = pedido ?? throw new ArgumentNullException(nameof(observer));
 
             Add(observer);
         }

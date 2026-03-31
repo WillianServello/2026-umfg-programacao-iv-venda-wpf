@@ -109,7 +109,7 @@ namespace projetoVendas.UserControls
             InitializeComponent();
             DataContext = new ReceberPedidoViewModel(this, observer, pedido);
         }
-
+        
         internal static void Exibir(IObserver observer, ModelPedido pedido)
         {
             (new ucReceberPedido(observer, pedido).DataContext as ReceberPedidoViewModel).Notify();
