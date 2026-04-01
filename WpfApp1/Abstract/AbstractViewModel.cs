@@ -35,18 +35,24 @@ namespace projetoVendas.Abstract
 
         public void Add(IObserver observer)
         {
-               _observers.Add(observer);
+            if (observer == null)
+                throw new ArgumentNullException(nameof(observer));
+
+            _observers.Add(observer);
         }
 
         public void Remove(IObserver observer)
         {
             _observers.Remove(observer);
         }
-
+        
         public void Notify()
         {
             foreach (var item in _observers)
             {
+                if (item == null) 
+                    throw new Exception("Observer null encontrado!");
+
                 item.Update(this);
             }
         }

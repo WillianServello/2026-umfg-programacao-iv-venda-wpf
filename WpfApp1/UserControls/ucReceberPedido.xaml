@@ -11,37 +11,60 @@
 
     <!-- Professor, tava muito dificil o seu, então adaptei pra algo que entenda
       { BORDER, GRID, STACKPANEL } = DIV 
-        BORDER USO PRA ESTILIZAR O CONTEINER
-    <materialDesign:PackIcon 
-            Kind="CartOutline" 
-            Width="30" 
-            Height="30"
-            Foreground="#F5F5F7"
-            VerticalAlignment="Center"/>
+        BORDER USO PRA ESTILIZAR O CONTEINERa
     -->
     <UserControl.Resources>
-        
-        
+
         <!-- STYLE DO TITULO DE CADA TEXTBOX -->
         <Style x:Key="TextBlockPagamento" TargetType="TextBlock">
             <Setter Property="Margin" Value="10,0,0,0"/>
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="Regular"/>
         </Style>
-        
+
         <Style x:Key="BordaPagamento" TargetType="Border">
             <Setter Property="Background" Value="White"/>
             <Setter Property="Padding" Value="0"/>
             <Setter Property="CornerRadius" Value="5"/>
+
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect 
+                Color="#000000"
+                BlurRadius="10"
+                ShadowDepth="1"
+                Opacity="0.10"/>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius" To="20" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity" To="0.3" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius" To="10" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity" To="0.15" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
         </Style>
-        
+
         <Style x:Key="ErroTextBox" TargetType="TextBlock">
             <Setter Property="Foreground" Value="Red"/>
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="FontWeight" Value="Light"/>
             <Setter Property="Margin" Value="10,0,0,0"/>
         </Style>
-        
+
         <!--CLASS DE SOMBRA DE CONTEINER ESTATICO-->
         <Style x:Key="SombraEstatica" TargetType="Border">
             <Setter Property="Effect">
@@ -96,48 +119,23 @@
             </Style.Triggers>
         </Style>
 
-
-
-
-        <!--CLASS DE SOMBRA E SCALE COM HOVER (USADO NO PAGAMENTO)-->
-
-        <Style x:Key="ShadowBorderStyle" TargetType="Border">
-
-            <Setter Property="Background" Value="Transparent"/>
-            
-            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
-
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <ScaleTransform ScaleY="1"/>
-                </Setter.Value>
-            </Setter>
+        <Style x:Key="SombraComHoverTextBox"
+       TargetType="TextBox"
+       BasedOn="{StaticResource MaterialDesignOutlinedTextBox}">
 
             <Setter Property="Effect">
                 <Setter.Value>
-                    <DropShadowEffect Color="#505050" BlurRadius="10" ShadowDepth="5" Opacity="0.2"/>
+                    <DropShadowEffect Color="#505050" BlurRadius="10" ShadowDepth="10" Opacity="0.1"/>
                 </Setter.Value>
             </Setter>
-            
+
             <Style.Triggers>
                 <EventTrigger RoutedEvent="MouseEnter">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation
-                                Storyboard.TargetProperty="Effect.BlurRadius"
-                                To="28" Duration="0:0:0.2"/>
-                            <DoubleAnimation
-                                Storyboard.TargetProperty="Effect.ShadowDepth"
-                                To="5" Duration="0:0:0.2"/>
-                            <DoubleAnimation
-                                Storyboard.TargetProperty="Effect.Opacity"
-                                To="0.25" Duration="0:0:0.2"/>
-
-                           
-                            <DoubleAnimation
-                                Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
-                                To="1.01" Duration="0:0:0.2"/>
-
+                            <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius" To="28" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Effect.ShadowDepth" To="5" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity" To="0.25" Duration="0:0:0.2"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -145,27 +143,19 @@
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation
-                                Storyboard.TargetProperty="Effect.BlurRadius"
-                                To="10" Duration="0:0:0.2"/>
-                            <DoubleAnimation
-                                Storyboard.TargetProperty="Effect.ShadowDepth"
-                                To="5" Duration="0:0:0.2"/>
-                            <DoubleAnimation
-                                Storyboard.TargetProperty="Effect.Opacity"
-                                To="0.2" Duration="0:0:0.2"/>
-
-                            <DoubleAnimation
-                                Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
-                                To="1" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Effect.BlurRadius" To="10" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Effect.ShadowDepth" To="5" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Effect.Opacity" To="0.2" Duration="0:0:0.2"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
             </Style.Triggers>
         </Style>
-    </UserControl.Resources>
 
-    <Grid>
+
+
+    </UserControl.Resources>
+    <Grid Background="#ECF0F1">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -177,22 +167,30 @@
                     BorderThickness="1"
                     Padding="40"
                     CornerRadius="10"
+                    Margin="0,0,0,-10"
                     Style="{StaticResource SombraEstatica}"
                     >
                 <StackPanel Orientation="Horizontal">
-                    
-                    <TextBlock Text="Carrinho"
-                               Foreground="#4B4B4B"
-                               FontSize="30"
-                               FontFamily="Arial"
-                               VerticalAlignment="Center"/>
-                    
+                    <Button Padding="10" Margin="0,0,10,0"
+                            Command="{Binding Voltar}">
+                        <materialDesign:PackIcon Kind="ArrowLeft"
+                                                 VerticalAlignment="Center"/>
+                    </Button>
+                    <TextBlock 
+                        Text="Finalizar Pedido"
+                        Foreground="#4B4B4B"
+                        FontSize="30"
+                        FontFamily="Arial"
+                        VerticalAlignment="Center"/>
+
                 </StackPanel>
             </Border>
         </Border>
 
         <Border Grid.Row="1" Padding="20">
             <Grid >
+                
+                
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
@@ -200,10 +198,10 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-
+                
                 <Border Background="White" 
                         CornerRadius="10"/>
-
+                
                 <!-- LISTA DO CARRINHO E PAGAMENTO (CONTEINERS) -->
                 <Border Padding="20">
                     <Grid>
@@ -226,8 +224,8 @@
                                 <ItemsControl ItemsSource="{Binding Pedido.Produtos}">
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate>
-                                            
-                                            <Border Background="#F5F5F7"
+
+                                            <Border Background="#FBFBFD"
                                                     CornerRadius="10"
                                                     Margin="5"
                                                     Padding="20"
@@ -241,14 +239,38 @@
                                                         <ColumnDefinition Width="*"/>
                                                         <ColumnDefinition Width="Auto"/>
                                                     </Grid.ColumnDefinitions>
-                                                    
 
-                                                        <TextBlock Grid.Column="0" 
-                                                                   Text="{Binding Referencia}" 
-                                                                   VerticalAlignment="Center"
-                                                                   FontSize="20"
-                                                                   FontFamily="Segoe UI Light"
-                                                                   Margin="0,0,20,0"/>
+                                                    <StackPanel 
+                                                        Grid.Column="0"
+                                                        Orientation="Horizontal">
+
+                                                        <Border
+                                                            BorderThickness="1"
+                                                            BorderBrush="SlateGray"
+                                                            HorizontalAlignment="Left"
+                                                            VerticalAlignment="Top"
+                                                            CornerRadius="2"
+                                                            Padding="2">
+
+
+                                                            <materialDesign:PackIcon 
+                                                                Kind="CartOutline"
+                                                                Width="16"
+                                                                Height="16"
+                                                                Foreground="SlateGray"/>
+
+                                                        </Border>
+
+
+                                                        <TextBlock  
+                                                           Text="{Binding Referencia}" 
+                                                           VerticalAlignment="Center"
+                                                           HorizontalAlignment="Center"
+                                                           FontSize="20"
+                                                           FontFamily="Segoe UI Light"
+                                                           Margin="0,0,20,0"/>
+                                                    </StackPanel>
+                                                        
 
                                                         <Image Grid.Column="1"
                                                                Source="{Binding Imagem}"
@@ -391,6 +413,7 @@
 
                                                 <Border 
                                                     Style="{StaticResource BordaPagamento}">
+                                                    
 
                                                     <TextBox 
                                                         x:Name="NomeCartao"
@@ -542,7 +565,7 @@
                                                          CommandParameter="{Binding}">
                                                         
                                                         <TextBlock 
-                                                            Text="Confirmar Pedido?" 
+                                                            Text="Confirmar Pedido" 
                                                             TextAlignment="Center" 
                                                             HorizontalAlignment="Center" 
                                                             VerticalAlignment="Center"

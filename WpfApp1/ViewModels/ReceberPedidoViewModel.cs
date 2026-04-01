@@ -30,7 +30,7 @@ namespace projetoVendas.ViewModels
         private string? _dataValidade;    
         private string? _nomeCartao = string.Empty;
 
-
+        public VoltarCommand Voltar { get; private set; }
         public FinalizarPedidoCommand Finalizar { get; private set; } = new();
         public void ValidarTudo()
         {
@@ -130,6 +130,7 @@ namespace projetoVendas.ViewModels
             MainWindow = observer ?? throw new ArgumentNullException(nameof(observer));
             Pedido = pedido ?? throw new ArgumentNullException(nameof(observer));
 
+            Voltar = new VoltarCommand(this);
             Add(observer);
         }
         public void ValidarCartaoSelecionado()

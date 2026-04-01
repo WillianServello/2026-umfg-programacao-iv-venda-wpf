@@ -25,12 +25,11 @@ namespace projetoVendas.Commands
             if (vm is null)
                 return;
 
-            // 🔥 chama validação pelo ViewModel
             vm.ValidarTudo();
 
             if (vm.HasErrors)
             {
-                MessageBox.Show("Preencha corretamente os campos!");
+                //MessageBox.Show("Preencha corretamente os campos!");
                 return;
             }
 

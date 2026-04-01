@@ -15,7 +15,7 @@ namespace projetoVendas.ViewModels
     {
        
         private UserControl _userControl;
-
+        public UserControl TelaAnterior { get; set; }
         public UserControl UserControl
         {
             get => _userControl;
@@ -31,8 +31,12 @@ namespace projetoVendas.ViewModels
 
         public void Update(ISubject subject)
         {
+            //PRA MIM LEMBRAR, MEIO QUE ESSE TELA ANTERIOR ELE SALVA A TELA QUE A GENTE ESTAVA ANTES, MEIO GAMBIARRA, MAS COM PROPOSITO SO DE VOLTAR ESSA PAGINA SERVE 
+            TelaAnterior = UserControl;
+
             if (subject is ListarProdutoViewModel)
                 UserControl = (subject as ListarProdutoViewModel).UserControl;
+
             if (subject is ReceberPedidoViewModel)
                 UserControl = (subject as ReceberPedidoViewModel).UserControl;
         }
